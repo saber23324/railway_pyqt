@@ -1,4 +1,4 @@
-_base_ = '.\yolo\yolov3_d53_8xb8-ms-608-273e_coco.py'
+_base_ = '.\yolov3_d53_8xb8-ms-608-273e_coco.py'
 
 data_root = r'E:\3_Entrepreneurship\XZT\Dataset\three_diseases'
 dataset_type = 'CocoDataset'
