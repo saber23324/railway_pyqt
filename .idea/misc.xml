@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="cp37_torch180_vision090_cu111" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="cp37_torch180_vision090_cu111" project-jdk-type="Python SDK" />
+</project>
