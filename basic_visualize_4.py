@@ -43,7 +43,7 @@ class Ui_ShangYi(object):
         ShangYi.setWindowIcon(icon)  
         ShangYi.setFixedSize(ShangYi.width(), ShangYi.height())
         self.label = QtWidgets.QLabel(ShangYi)
-        self.label.setGeometry(QtCore.QRect(550, 15, 216, 26))
+        self.label.setGeometry(QtCore.QRect(550, 15, 256, 26))
         self.label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
@@ -110,8 +110,17 @@ class Ui_ShangYi(object):
         self.b0.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b0.setObjectName("b0")
 
+        self.b0_1 = QtWidgets.QToolButton(ShangYi)
+        self.b0_1.setGeometry(QtCore.QRect(10, 80, 100, 45))
+        icon1 = QtGui.QIcon()
+
+        icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.b0_1.setIcon(icon1)
+        self.b0_1.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        self.b0_1.setObjectName("b0_1")
+
         self.b1 = QtWidgets.QToolButton(ShangYi)
-        self.b1.setGeometry(QtCore.QRect(10, 100, 100, 45))
+        self.b1.setGeometry(QtCore.QRect(10, 130, 100, 45))
         icon1 = QtGui.QIcon()
 
         icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -196,24 +205,46 @@ class Ui_ShangYi(object):
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
 
+        self.label_realTime = QtWidgets.QLabel(ShangYi)
+        self.label_realTime.setGeometry(QtCore.QRect(120, 60, 950, 30))
+        self.label_realTime.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_realTime.setObjectName("label_realTime")
+
+        self.label_realTime_2 = QtWidgets.QLabel(ShangYi)
+        self.label_realTime_2.setGeometry(QtCore.QRect(120, 495, 950, 30))
+        self.label_realTime_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_realTime_2.setObjectName("label_realTime_2")
+
+        # 图片显示控件
         self.graphicsViewRealTime = GraphicsView(ShangYi)
-        self.graphicsViewRealTime.setGeometry(QtCore.QRect(120, 60, 950, 860))  # 修改
-        self.graphicsViewRealTime.setObjectName("graphicsView")
+        self.graphicsViewRealTime.setGeometry(QtCore.QRect(120, 80, 950, 410))  # 修改
+        self.graphicsViewRealTime.setObjectName("graphicsViewRealTime")
         self.graphicsViewRealTime.hide()
 
+        self.graphicsViewRealTime_2 = GraphicsView(ShangYi)
+        self.graphicsViewRealTime_2.setGeometry(QtCore.QRect(120, 520, 950, 410))  # 修改
+        self.graphicsViewRealTime_2.setObjectName("graphicsViewRealTime_2")
+        self.graphicsViewRealTime_2.hide()
+
         self.graphicsView_show_res = GraphicsView(ShangYi)
-        self.graphicsView_show_res.setGeometry(QtCore.QRect(1205, 60, 400, 800))
+        self.graphicsView_show_res.setGeometry(QtCore.QRect(1205, 80, 400, 410))
         self.graphicsView_show_res.setObjectName("graphicsView_show_res")
         self.graphicsView_show_res.hide()
 
+
+        self.graphicsView_show_res_2 = GraphicsView(ShangYi)
+        self.graphicsView_show_res_2.setGeometry(QtCore.QRect(1205, 520, 400, 410))
+        self.graphicsView_show_res_2.setObjectName("graphicsView_show_res_2")
+        self.graphicsView_show_res_2.hide()
+
         self.graphicsView = GraphicsView(ShangYi)
-        self.graphicsView.setGeometry(QtCore.QRect(120, 60, 950, 430))
+        self.graphicsView.setGeometry(QtCore.QRect(120, 60, 950, 860))
         self.graphicsView.setObjectName("graphicsView")
         self.graphicsView.show()
-
-        self.graphicsView_2 = GraphicsView(ShangYi)
-        self.graphicsView_2.setGeometry(QtCore.QRect(120, 500, 950, 430))
-        self.graphicsView_2.setObjectName("graphicsView_2")
+        #
+        # self.graphicsView_2 = GraphicsView(ShangYi)
+        # self.graphicsView_2.setGeometry(QtCore.QRect(120, 500, 950, 430))
+        # self.graphicsView_2.setObjectName("graphicsView_2")
 
 
         self.comboBox = QtWidgets.QComboBox(ShangYi)
@@ -241,8 +272,9 @@ class Ui_ShangYi(object):
 
     def hidden(self):
         self.graphicsViewRealTime.show()
+        self.graphicsViewRealTime_2.show()
         self.graphicsView.hide()
-        self.graphicsView_2.hide()
+        # self.graphicsView_2.hide()
         self.label_2.hide()
         self.toolButton.hide()
         self.toolButton_2.hide()
@@ -271,9 +303,11 @@ class Ui_ShangYi(object):
     def myshow(self):
         self.timer.stop()
         self.graphicsViewRealTime.hide()
+        self.graphicsViewRealTime_2.hide()
         self.graphicsView.show()
-        self.graphicsView_2.show()
+        # self.graphicsView_2.show()
         self.graphicsView_show_res.hide()
+        self.graphicsView_show_res_2.hide()
         self.dockWidget.setVisible(True)
         self.dockWidget_2.setVisible(True)
         self.dockWidget_3.show()
@@ -284,6 +318,8 @@ class Ui_ShangYi(object):
         self.b11.show()
         self.b10.show()
         self.label_3.show()
+        self.show_det_res_Button.hide()
+        self.shut_down_det_res_Button.hide()
 
     def retranslateUi(self, ShangYi):
         _translate = QtCore.QCoreApplication.translate
@@ -294,8 +330,9 @@ class Ui_ShangYi(object):
         self.dockWidget_2.setWindowTitle(_translate("ShangYi", "Label List"))
         self.dockWidget_3.setWindowTitle(_translate("ShangYi", "Polygon Labels"))
         self.dockWidget_4.setWindowTitle(_translate("ShangYi", "File List"))
-        self.label_2.setText(_translate("ShangYi", "原始图像"))
-        self.b0.setText(_translate("ShangYi", " 实况目录 "))
+        # self.label_2.setText(_translate("ShangYi", "原始图像"))
+        self.b0.setText(_translate("ShangYi", "实况目录一"))
+        self.b0_1.setText(_translate("ShangYi", "实况目录二"))
         # self.b0.setShortcut(_translate("ShangYi", "Ctrl+O"))
         self.b1.setText(_translate("ShangYi", " 打开图像 "))
         self.b1.setShortcut(_translate("ShangYi", "Ctrl+O"))
@@ -311,15 +348,18 @@ class Ui_ShangYi(object):
         self.b5.setText(_translate("ShangYi", "删除关键点"))
         self.b6.setText(_translate("ShangYi", " 加载模型 "))
         # self.b7.setText(_translate("ShangYi", " 更新脉络 "))
-        self.b7.setText(_translate("ShangYi", " 更新铁轨识别 "))
+        self.b7.setText(_translate("ShangYi", " 更新识别 "))
         self.b8.setText(_translate("ShangYi", "   保存   "))
         self.b8.setShortcut(_translate("ShangYi", "Ctrl+S"))
-        self.label_3.setText(_translate("ShangYi", "预标注结果"))
+        # self.label_3.setText(_translate("ShangYi", "预标注结果"))
         self.label_4.setText(_translate("ShangYi", "模型："))
 
         self.directory = None
+        self.directory_2 = None
         self.current_files = set()
+        self.current_files_2 = set()
         self.current_file = None
+        self.current_file_2 = None
         self.timer = QTimer(ShangYi)
         self.timer.timeout.connect(self.check_new_files)
 
@@ -327,11 +367,12 @@ class Ui_ShangYi(object):
 
         # 实况按钮
         self.b0.clicked.connect(self.select_directory)
+        self.b0_1.clicked.connect(self.select_directory_2)
         self.b1.clicked.connect(self.openImage)
         self.b2.clicked.connect(self.openfiles)
         # 实时检测显示按钮
         self.show_det_res_Button.setText(_translate("ShangYi", "  开启检测  "))
-        self.show_det_res_Button.clicked.connect(self.show_det_result)
+        self.show_det_res_Button.clicked.connect(self.detection_current_image)
         self.show_det_res_Button.hide()
 
         self.shut_down_det_res_Button.setText(_translate("ShangYi", "  关闭检测  "))
@@ -358,6 +399,7 @@ class Ui_ShangYi(object):
 
 
         self.b0.clicked.connect(self.hidden)
+        self.b0_1.clicked.connect(self.hidden)
         self.b1.clicked.connect(self.myshow)
         self.b2.clicked.connect(self.myshow)
         self.b3.clicked.connect(self.myshow)
@@ -372,7 +414,7 @@ class Ui_ShangYi(object):
     #检测打开目录中的图片
     def single_pre(self):
         if self.curr_pic :
-            detect_output="-p"+" "+self.curr_pic+"\n"
+            detect_output="-p1"+" "+self.curr_pic+"\n"
             self.static_detection_process.stdin.write(detect_output.encode("utf-8"))
             self.static_detection_process.stdin.flush()
     
@@ -479,11 +521,19 @@ class Ui_ShangYi(object):
                     image = QPixmap(file_path)
                     print('file_path' + file_path)
                     self.current_file = file_path
-                    self.show_image(image)
+
+                    self.graphicsViewRealTime.scene.clear()
+                    self.graphicsViewRealTime.bboxPointList.clear()
+                    self.graphicsViewRealTime.bboxList.clear()
+                    self.graphicsViewRealTime.itemsToShapes.clear()
+                    self.graphicsViewRealTime.shapesToItems.clear()
+
+
+                    self.graphicsViewRealTime.scene.addItem(self.show_image(image))
                     if self.show_det_res:
+                        self.detection_current_image()
 
 
-                        self.show_det_result()
 
                     print(file_path)
                     # self.listWidget_2.addItem(file_path)
@@ -493,13 +543,47 @@ class Ui_ShangYi(object):
             self.current_files = new_files
             # print(self.current_files)
 
+
+        if self.directory_2:
+            print('执行一次 self.directory_2 的 check_new_files')
+            new_files = set(os.listdir(self.directory_2))
+            added_files = new_files - self.current_files_2
+
+
+            for file in added_files:
+                print('added_files：' + file)
+                file_path = os.path.join(self.directory_2, file)
+                print('file_path：' + file_path)
+                print(os.path.isfile(file_path) and file.lower().endswith(('.jpg', '.png', '.bmp')))
+                if os.path.isfile(file_path) and file.lower().endswith(('.jpg', '.png', '.bmp')):
+                    image = QPixmap(file_path)
+                    print('file_path' + file_path)
+                    self.current_file_2 = file_path
+
+                    self.graphicsViewRealTime_2.scene.clear()
+                    self.graphicsViewRealTime_2.bboxPointList.clear()
+                    self.graphicsViewRealTime_2.bboxList.clear()
+                    self.graphicsViewRealTime_2.itemsToShapes.clear()
+                    self.graphicsViewRealTime_2.shapesToItems.clear()
+
+                    self.graphicsViewRealTime_2.scene.addItem(self.show_image(image))
+                    if self.show_det_res:
+                        self.detection_current_image()
+
+
+                    print(file_path)
+                    # self.listWidget_2.addItem(file_path)
+            self.current_files_2 = new_files
+            # print(self.current_files)
+
+        if self.show_det_res and self.current_file:
+            self.show_current_result()
+
+        if self.show_det_res and self.current_file_2:
+            self.show_current_result()
+
     def show_image(self, image):
 
-        self.graphicsViewRealTime.scene.clear()
-        self.graphicsViewRealTime.bboxPointList.clear()
-        self.graphicsViewRealTime.bboxList.clear()
-        self.graphicsViewRealTime.itemsToShapes.clear()
-        self.graphicsViewRealTime.shapesToItems.clear()
 
         # w = int(image.width() * self.graphicsView.height() / image.height())
         # w = 1080
@@ -507,7 +591,7 @@ class Ui_ShangYi(object):
         self.image2 = image.scaled(self.graphicsViewRealTime.height(), self.graphicsViewRealTime.height(), Qt.IgnoreAspectRatio)
         # self.image2 = image.scaled(self.graphicsView.height(),self.graphicsView.height(),KeepAspectRatio=False)
         picture = QGraphicsPixmapItem(self.image2)
-        self.graphicsViewRealTime.scene.addItem(picture)
+        return picture
 
     def get_latest_image(self, folder_path):
         # 获取文件夹下所有的图片文件（假设图片格式为jpg、png、jpeg等）
@@ -516,7 +600,7 @@ class Ui_ShangYi(object):
 
         if not image_files:
             print("No images found in the folder.")
-            return None
+
 
         # 找到最新添加的图片
         latest_image = max(image_files, key=os.path.getctime)
@@ -540,13 +624,20 @@ class Ui_ShangYi(object):
         self.graphicsView_show_res.itemsToShapes.clear()
         self.graphicsView_show_res.shapesToItems.clear()
 
+        self.graphicsView_show_res_2.scene.clear()
+        self.graphicsView_show_res_2.bboxPointList.clear()
+        self.graphicsView_show_res_2.bboxList.clear()
+        self.graphicsView_show_res_2.itemsToShapes.clear()
+        self.graphicsView_show_res_2.shapesToItems.clear()
 
-    def show_det_result(self):
+
+    def detection_current_image(self):
         if not self.show_det_res:
             self.show_det_res = True
 
 
         self.graphicsView_show_res.show()
+        self.graphicsView_show_res_2.show()
         # 当前显示的图片
         if self.current_file:
 
@@ -555,46 +646,101 @@ class Ui_ShangYi(object):
             print('实时检测改图： ' + file_path)
 
             print('config_file:' + self.config_file_path)
-            detect_output="-p"+" "+file_path+"\n"
+
+            # "-p"：这是一个命令行参数，通常用于指定某个选项或标志。
+            # " "：这是一个空格字符，用于分隔参数和文件路径。
+            # file_path：这是一个变量，包含文件的路径。
+            # "\n"：这是一个换行符，表示命令的结束。
+            detect_output = "-p1" + " " + file_path + "\n"
+            # self.detection_process：这是一个子进程对象，通常由 subprocess.Popen 创建
+            # stdin.write(...)：这会将数据写入子进程的标准输入（stdin）。
+            # detect_output.encode("utf-8")：将字符串 detect_output 编码为 UTF-8 字节流，因为 stdin.write 需要字节数据而不是字符串。
             self.detection_process.stdin.write(detect_output.encode("utf-8"))
+            # flush()：这个方法会强制将缓冲区中的数据立即写入子进程，而不是等待缓冲区满了再写入。
             self.detection_process.stdin.flush()
 
-            # self.detection_process.communicate("-p"+file_path)
-            # subprocess.call(
-            #     ['python', 'tools/scrip_intfere.py', file_path, self.config_file_path, self.model_weights_path])
-            # subprocess.call(['python','tools/scrip_intfere.py','%s','%s','%s']%(file_path,self.config_file_path,self.model_weights_path))
-            result_img_path = os.path.join('./detect_results' , os.path.basename(file_path))
-            print('检测结果 result_img_path: '+result_img_path)
-            if os.path.isfile(result_img_path):
+        # 当前显示的图片
+        if self.current_file_2:
+            file_path = self.current_file_2
+            detect_output = "-p2" + " " + file_path + "\n"
+            # self.detection_process：这是一个子进程对象，通常由 subprocess.Popen 创建
+            # stdin.write(...)：这会将数据写入子进程的标准输入（stdin）。
+            # detect_output.encode("utf-8")：将字符串 detect_output 编码为 UTF-8 字节流，因为 stdin.write 需要字节数据而不是字符串。
+            self.detection_process.stdin.write(detect_output.encode("utf-8"))
+            # flush()：这个方法会强制将缓冲区中的数据立即写入子进程，而不是等待缓冲区满了再写入。
+            self.detection_process.stdin.flush()
 
-                result_img = QPixmap(result_img_path)
+    def show_current_result(self):
 
+        print('执行一次  show_current_result')
 
+        if self.current_file:
+            print('执行一次 current_file 的  show_current_result')
+            current_file_result_path = os.path.basename(self.current_file)
+            print(' current_file_result_path: ' + current_file_result_path)
+            current_file_result = os.path.join('./detect_results/vis', current_file_result_path)
+            print('current_file_result ' + current_file_result)
 
-                # result_img = QPixmap(load_mmdet_model(file_path))
-
-                # w = int(result_img.width() * self.graphicsView_show_res.height() / result_img.height())
-                # h = int(result_img.height()* self.graphicsView_show_res.height() / result_img.height())
-                # image2 = result_img.scaled(self.graphicsView_show_res.width(),h)
-                self.image2 = result_img.scaled(self.graphicsView_show_res.width(), self.graphicsView_show_res.height(),
-                                                Qt.IgnoreAspectRatio)
-
-                picture = QGraphicsPixmapItem(self.image2)
-
-                self.graphicsView_show_res.scene.clear()
-                self.graphicsView_show_res.bboxPointList.clear()
-                self.graphicsView_show_res.bboxList.clear()
-                self.graphicsView_show_res.itemsToShapes.clear()
-                self.graphicsView_show_res.shapesToItems.clear()
-                self.graphicsView_show_res.scene.addItem(picture)
+            if not current_file_result:
+                print("No images found in the folder.")
             else:
-                self.graphicsView_show_res.scene.clear()
-                self.graphicsView_show_res.bboxPointList.clear()
-                self.graphicsView_show_res.bboxList.clear()
-                self.graphicsView_show_res.itemsToShapes.clear()
-                self.graphicsView_show_res.shapesToItems.clear()
+                print('最新的检测结果 result_img_path: ' + current_file_result)
 
+                if os.path.isfile(current_file_result):
 
+                    result_img = QPixmap(current_file_result)
+                    self.image2 = result_img.scaled(self.graphicsView_show_res.width(),
+                                                    self.graphicsView_show_res.height(),
+                                                    Qt.IgnoreAspectRatio)
+
+                    picture = QGraphicsPixmapItem(self.image2)
+
+                    self.graphicsView_show_res.scene.clear()
+                    self.graphicsView_show_res.bboxPointList.clear()
+                    self.graphicsView_show_res.bboxList.clear()
+                    self.graphicsView_show_res.itemsToShapes.clear()
+                    self.graphicsView_show_res.shapesToItems.clear()
+                    self.graphicsView_show_res.scene.addItem(picture)
+                else:
+                    self.graphicsView_show_res.scene.clear()
+                    self.graphicsView_show_res.bboxPointList.clear()
+                    self.graphicsView_show_res.bboxList.clear()
+                    self.graphicsView_show_res.itemsToShapes.clear()
+                    self.graphicsView_show_res.shapesToItems.clear()
+
+        if self.current_file_2:
+            print('执行一次 current_file 的  show_current_result')
+            current_file_result_path = os.path.basename(self.current_file_2)
+            print(' current_file_result_path: ' + current_file_result_path)
+            current_file_result = os.path.join('./detect_results_2/vis', current_file_result_path)
+            print('current_file_result ' + current_file_result)
+
+            if not current_file_result:
+                print("No images found in the folder.")
+            else:
+                print('最新的检测结果 result_img_path: ' + current_file_result)
+
+                if os.path.isfile(current_file_result):
+
+                    result_img = QPixmap(current_file_result)
+                    self.image2 = result_img.scaled(self.graphicsView_show_res_2.width(),
+                                                    self.graphicsView_show_res_2.height(),
+                                                    Qt.IgnoreAspectRatio)
+
+                    picture = QGraphicsPixmapItem(self.image2)
+
+                    self.graphicsView_show_res_2.scene.clear()
+                    self.graphicsView_show_res_2.bboxPointList.clear()
+                    self.graphicsView_show_res_2.bboxList.clear()
+                    self.graphicsView_show_res_2.itemsToShapes.clear()
+                    self.graphicsView_show_res_2.shapesToItems.clear()
+                    self.graphicsView_show_res_2.scene.addItem(picture)
+                else:
+                    self.graphicsView_show_res_2.scene.clear()
+                    self.graphicsView_show_res_2.bboxPointList.clear()
+                    self.graphicsView_show_res_2.bboxList.clear()
+                    self.graphicsView_show_res_2.itemsToShapes.clear()
+                    self.graphicsView_show_res_2.shapesToItems.clear()
 
     def select_directory(self):
         self.show_det_res_Button.show()  # 展示实况检测按钮
@@ -603,6 +749,8 @@ class Ui_ShangYi(object):
 
         self.directory = QFileDialog.getExistingDirectory()
         if self.directory:
+            self.label_realTime.setText('目录一： '+str(self.directory))
+            self.label_realTime.setAlignment(Qt.AlignLeft)
             self.graphicsView.scene.clear()
             self.graphicsView.bboxPointList.clear()
             self.graphicsView.bboxList.clear()
@@ -619,7 +767,42 @@ class Ui_ShangYi(object):
             self.listWidget_2.clear()
 
             if not self.timer.isActive():
-                self.timer.start(5000)
+                self.timer.start(1000)
+            #     直接获取当前文件夹的文件目录
+            # for file in self.current_files:
+            #     file_path = os.path.join(self.directory, file)
+            #     if os.path.isfile(file_path) and file.lower().endswith(('.jpg', '.png')):
+            #         self.listWidget_2.addItem(file_path)
+
+
+    def select_directory_2(self):
+        self.show_det_res_Button.show()  # 展示实况检测按钮
+        self.shut_down_det_res_Button.show()
+        self.current_file_2 = None
+
+        self.directory_2 = QFileDialog.getExistingDirectory()
+        if self.directory_2:
+
+            self.label_realTime_2.setText('目录二： '+str(self.directory_2))
+            self.label_realTime_2.setAlignment(Qt.AlignLeft)
+
+            self.graphicsViewRealTime_2.scene.clear()
+            self.graphicsViewRealTime_2.bboxPointList.clear()
+            self.graphicsViewRealTime_2.bboxList.clear()
+            self.graphicsViewRealTime_2.itemsToShapes.clear()
+            self.graphicsViewRealTime_2.shapesToItems.clear()
+            self.graphicsView_show_res.scene.clear()
+            self.graphicsView_show_res.bboxPointList.clear()
+            self.graphicsView_show_res.bboxList.clear()
+            self.graphicsView_show_res.itemsToShapes.clear()
+            self.graphicsView_show_res.shapesToItems.clear()
+            # 获取选定目录的结果
+            self.current_files_2 = set(os.listdir(self.directory_2))
+            self.current_file_2 = None
+            self.listWidget_2.clear()
+
+            if not self.timer.isActive():
+                self.timer.start(1000)
             #     直接获取当前文件夹的文件目录
             # for file in self.current_files:
             #     file_path = os.path.join(self.directory, file)
@@ -641,7 +824,7 @@ class Ui_ShangYi(object):
             self.curr_pic = self.label_path + "/" + self.files[0]
             image = QPixmap(self.curr_pic)
             self.showImg(image)
-            self.showImg2(image)
+            # self.showImg2(image)
             # 清空listWidget，
             self.listWidget_2.clear()
             for i in range(0, len(self.files)):
@@ -742,19 +925,20 @@ class Ui_ShangYi(object):
         picture = QGraphicsPixmapItem(self.image2)
         self.graphicsView.scene.addItem(picture)
         json_path = self.curr_pic.split(".")[0] + ".json"
+
         if os.path.exists(json_path):
             self.read_json(json_path)
 
-    def showImg2(self, image):  #图片显示在另一控件
-        self.graphicsView_2.scene.clear()
-        w = int(image.width() * self.graphicsView_2.height() / image.height())
-        self.image2 = image.scaled(w, self.graphicsView_2.height())
-        picture = QGraphicsPixmapItem(self.image2)
-        self.graphicsView_2.scene.addItem(picture)
-
-        json_path = self.curr_pic.split(".")[0] + ".json"
-        if os.path.exists(json_path):
-            self.read_json2(json_path)
+    # def showImg2(self, image):  #图片显示在另一控件
+    #     self.graphicsView_2.scene.clear()
+    #     w = int(image.width() * self.graphicsView_2.height() / image.height())
+    #     self.image2 = image.scaled(w, self.graphicsView_2.height())
+    #     picture = QGraphicsPixmapItem(self.image2)
+    #     self.graphicsView_2.scene.addItem(picture)
+    #
+    #     json_path = self.curr_pic.split(".")[0] + ".json"
+    #     if os.path.exists(json_path):
+    #         self.read_json2(json_path)
 
     def preImg(self):  #切换上一张图片
         if self.i > 0:
@@ -762,7 +946,7 @@ class Ui_ShangYi(object):
             self.curr_pic = self.label_path + "/" + self.files[self.i]
             image = QPixmap(self.curr_pic)
             self.showImg(image)
-            self.showImg2(image)
+            # self.showImg2(image)
         else:
             msg = QMessageBox.information(None, "提示", "已经是第一张了！")
 
@@ -772,7 +956,7 @@ class Ui_ShangYi(object):
             self.curr_pic = self.label_path + "/" + self.files[self.i]
             image = QPixmap(self.curr_pic)
             self.showImg(image)
-            self.showImg2(image)
+            # self.showImg2(image)
         else:
             msg = QMessageBox.information(None, "提示", "已经是最后一张了！")
 
@@ -780,7 +964,7 @@ class Ui_ShangYi(object):
         self.curr_pic = self.label_path + "/" + self.files[i]
         image = QPixmap(self.curr_pic)
         self.showImg(image)
-        self.showImg2(image)
+        # self.showImg2(image)
 
     def save(self):  #保存json文件
         A = dict()

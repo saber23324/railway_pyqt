@@ -58,13 +58,21 @@ def load_mmdet_model(model_name='Yolov3'):
 
 def load_mmdet_imge(img_path):
     try:
-        result=inferencer(img_path, out_dir='detect_results/', no_save_pred=False)
+        inferencer(img_path, out_dir='detect_results/', no_save_pred=False)
     except Exception as e:
         # print(e)
         with open('interlog.txt','a') as file:
-            file.write(str(e)+'\n')
+            file.write(e+"\n")
         return
-        
+def load_mmdet_imge_2(img_path):
+    try:
+        inferencer(img_path, out_dir='detect_results_2/', no_save_pred=False)
+    except Exception as e:
+        # print(e)
+        with open('interlog.txt','a') as file:
+            file.write(e+"\n")
+        return
+
     # # 获取可视化器
     # det_visualizer = DetLocalVisualizer()
     # # 获取原图
@@ -106,8 +114,10 @@ if __name__ == '__main__':
             # print(result[0])
             if(result[0]=="-m"):
                 load_mmdet_model(result[1])
-            elif(result[0]=="-p"):
+            elif (result[0] == "-p1"):
                 print(load_mmdet_imge(result[1]))
+            elif (result[0] == "-p2"):
+                print(load_mmdet_imge_2(result[1]))
             elif(result[0]=="-q"):
                 print('procese quit!')
                 sys.exit()
