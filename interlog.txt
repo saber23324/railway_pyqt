@@ -38,3 +38,4 @@ unsupported operand type(s) for /: 'list' and 'int'
 -p /home/gsw/detect_results/000010（复件）（另一个复件）.jpg
 -d /home/gsw/detect_results
 -d /home/gsw/detect_results
+-d /home/gsw/detect_results
