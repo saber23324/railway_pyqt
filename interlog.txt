@@ -1,0 +1,58 @@
+-d /home/gsw/detect_results
+-d /home/gsw/detect_results
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+-d /home/gsw/detect_results
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+-p /home/gsw/detect_results/00007（另一个复件）.jpg
+unsupported operand type(s) for /: 'list' and 'int'
+-d /home/gsw/detect_results
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+-d /home/gsw/detect_results
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+-d /home/gsw/detect_results
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+-d /home/gsw/detect_results
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+unsupported operand type(s) for /: 'list' and 'int'
+-d /home/gsw/detect_results
+-d /home/gsw/detect_results
+-d /home/gsw/detect_results
+-p /home/gsw/detect_results/000008（复件）（复件）.jpg
+-p /home/gsw/detect_results/000010（复件）（另一个复件）.jpg
+-d /home/gsw/detect_results
+-d /home/gsw/detect_results
+-m Yolov3(Ĭ��)
+-p1 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_1\00043.jpg
+-p2 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_2\100030.jpg
+-p1 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_1\IMG_6246.jpg
+-p2 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_2\100030.jpg
+-p1 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_1\IMG_6246.jpg
+-p2 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_2\IMG_6261.jpg
+-p1 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_1\IMG_6246.jpg
+-p2 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_2\IMG_6261.jpg
+-m Yolov3(Ĭ��)
+-m Yolov3(Ĭ��)
+-p1 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_1\00054.jpg
+-p2 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_2\00059.jpg
+-d E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_1
+-m ViTDet
+-p1 /home/gsw/setting/railway_detection/detect_results/IMG_6226.jpg
+-p2 /home/gsw/setting/railway_detection/detect_results_2/IMG_6230.jpg
+-d /home/gsw/detect_results

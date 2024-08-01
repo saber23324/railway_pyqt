@@ -1420,7 +1420,7 @@ class GraphicsView(QGraphicsView):
 
         if event.button() == Qt.LeftButton:
             item = self.get_item_at_click(event)
-            # item.setSelected(True) #报错？？？
+            item.setSelected(True) #报错？？？
 
     def mouseMoveEvent(self, event):  #鼠标移动事件
         super().mouseMoveEvent(event)
