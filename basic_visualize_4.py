@@ -101,24 +101,33 @@ class Ui_ShangYi(object):
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
 
+        self.showRealTimeButton = QtWidgets.QToolButton(ShangYi)
+        self.showRealTimeButton.setGeometry(QtCore.QRect(10, 60, 100, 45))
+        icon1 = QtGui.QIcon()
+
+        icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.showRealTimeButton.setIcon(icon1)
+        self.showRealTimeButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        self.showRealTimeButton.setObjectName("showRealTimeButton")
+
         self.b0 = QtWidgets.QToolButton(ShangYi)
-        self.b0.setGeometry(QtCore.QRect(10, 20, 100, 45))
+        self.b0.setGeometry(QtCore.QRect(120, 60, 100, 45))
         icon1 = QtGui.QIcon()
 
         icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b0.setIcon(icon1)
         self.b0.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b0.setObjectName("b0")
-
+        self.b0.hide()
         self.b0_1 = QtWidgets.QToolButton(ShangYi)
-        self.b0_1.setGeometry(QtCore.QRect(10, 80, 100, 45))
+        self.b0_1.setGeometry(QtCore.QRect(120, 505, 100, 45))
         icon1 = QtGui.QIcon()
 
         icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b0_1.setIcon(icon1)
         self.b0_1.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b0_1.setObjectName("b0_1")
-
+        self.b0_1.hide()
         self.b1 = QtWidgets.QToolButton(ShangYi)
         self.b1.setGeometry(QtCore.QRect(10, 130, 100, 45))
         icon1 = QtGui.QIcon()
@@ -206,23 +215,23 @@ class Ui_ShangYi(object):
         self.label_3.setObjectName("label_3")
 
         self.label_realTime = QtWidgets.QLabel(ShangYi)
-        self.label_realTime.setGeometry(QtCore.QRect(120, 60, 950, 30))
+        self.label_realTime.setGeometry(QtCore.QRect(220, 80, 950, 30))
         self.label_realTime.setAlignment(QtCore.Qt.AlignCenter)
         self.label_realTime.setObjectName("label_realTime")
 
         self.label_realTime_2 = QtWidgets.QLabel(ShangYi)
-        self.label_realTime_2.setGeometry(QtCore.QRect(120, 495, 950, 30))
+        self.label_realTime_2.setGeometry(QtCore.QRect(220, 520, 950, 30))
         self.label_realTime_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_realTime_2.setObjectName("label_realTime_2")
 
         # 图片显示控件
         self.graphicsViewRealTime = GraphicsView(ShangYi)
-        self.graphicsViewRealTime.setGeometry(QtCore.QRect(120, 80, 950, 410))  # 修改
+        self.graphicsViewRealTime.setGeometry(QtCore.QRect(120, 120, 950, 380))  # 修改
         self.graphicsViewRealTime.setObjectName("graphicsViewRealTime")
         self.graphicsViewRealTime.hide()
 
         self.graphicsViewRealTime_2 = GraphicsView(ShangYi)
-        self.graphicsViewRealTime_2.setGeometry(QtCore.QRect(120, 520, 950, 410))  # 修改
+        self.graphicsViewRealTime_2.setGeometry(QtCore.QRect(120, 560, 950, 380))  # 修改
         self.graphicsViewRealTime_2.setObjectName("graphicsViewRealTime_2")
         self.graphicsViewRealTime_2.hide()
 
@@ -271,6 +280,9 @@ class Ui_ShangYi(object):
     static_pushnum = 1
 
     def hidden(self):
+        self.b0.show()
+        self.b0_1.show()
+
         self.graphicsViewRealTime.show()
         self.graphicsViewRealTime_2.show()
         self.graphicsView.hide()
@@ -301,6 +313,8 @@ class Ui_ShangYi(object):
         # self.dockWidget_2.setGeometry(QtCore.QRect(1205, 470, 398, 205))
 
     def myshow(self):
+        self.b0.hide()
+        self.b0_1.hide()
         self.timer.stop()
         self.graphicsViewRealTime.hide()
         self.graphicsViewRealTime_2.hide()
@@ -331,8 +345,9 @@ class Ui_ShangYi(object):
         self.dockWidget_3.setWindowTitle(_translate("ShangYi", "Polygon Labels"))
         self.dockWidget_4.setWindowTitle(_translate("ShangYi", "File List"))
         # self.label_2.setText(_translate("ShangYi", "原始图像"))
-        self.b0.setText(_translate("ShangYi", "实况目录一"))
-        self.b0_1.setText(_translate("ShangYi", "实况目录二"))
+        self.showRealTimeButton.setText(_translate("ShangYi", "实况目录"))
+        self.b0.setText(_translate("ShangYi", "选择目录一"))
+        self.b0_1.setText(_translate("ShangYi", "选择目录二"))
         # self.b0.setShortcut(_translate("ShangYi", "Ctrl+O"))
         self.b1.setText(_translate("ShangYi", " 打开图像 "))
         self.b1.setShortcut(_translate("ShangYi", "Ctrl+O"))
@@ -342,14 +357,14 @@ class Ui_ShangYi(object):
         self.b2.setShortcut(_translate("ShangYi", "Ctrl+U"))
         self.b11.setText(_translate("ShangYi", "单个预标注"))
         # self.b4.setText(_translate("ShangYi", "更新关键点"))
-        self.b4.setText(_translate("ShangYi", "更新标注"))
+        self.b4.setText(_translate("ShangYi", "创建矩形框"))
         self.b10.setText(_translate("ShangYi", "批量预标注"))
-        self.b3.setText(_translate("ShangYi", "更新矩形框"))
-        self.b5.setText(_translate("ShangYi", "删除关键点"))
+        self.b3.setText(_translate("ShangYi", "编辑框标签"))
+        self.b5.setText(_translate("ShangYi", "删除矩形框"))
         self.b6.setText(_translate("ShangYi", " 加载模型 "))
         # self.b7.setText(_translate("ShangYi", " 更新脉络 "))
-        self.b7.setText(_translate("ShangYi", " 更新识别 "))
-        self.b8.setText(_translate("ShangYi", "   保存   "))
+        self.b7.setText(_translate("ShangYi", " 更新标注 "))
+        self.b8.setText(_translate("ShangYi", "   保存标注   "))
         self.b8.setShortcut(_translate("ShangYi", "Ctrl+S"))
         # self.label_3.setText(_translate("ShangYi", "预标注结果"))
         self.label_4.setText(_translate("ShangYi", "模型："))
@@ -398,8 +413,9 @@ class Ui_ShangYi(object):
         self.b11.clicked.connect(self.single_pre)
 
 
-        self.b0.clicked.connect(self.hidden)
-        self.b0_1.clicked.connect(self.hidden)
+        self.showRealTimeButton.clicked.connect(self.hidden)
+        # self.b0.clicked.connect(self.hidden)
+        # self.b0_1.clicked.connect(self.hidden)
         self.b1.clicked.connect(self.myshow)
         self.b2.clicked.connect(self.myshow)
         self.b3.clicked.connect(self.myshow)
