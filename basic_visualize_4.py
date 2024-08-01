@@ -1241,7 +1241,7 @@ class GraphicsView(QGraphicsView):
 
         self.itemsToShapes = {}
         self.shapesToItems = {}
-        self.Rectmode = False
+        self.Rectmode = True
         self.bboxPointList = []
         self.labelList = []
         self.bboxList = []
