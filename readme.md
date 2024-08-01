@@ -7,4 +7,10 @@
 #### 环境
 pyqt5 mmdetection 3.0.0以上 
 #### bug
-1.mmdet与pyqt无法共存，使用脚本方式在不同进程运行。
+1. mmdet与pyqt无法共存，使用脚本方式在不同进程运行。
+2. 使用gsw的服务器。运行脚本之前需要输入 `unset LD_LIBRARY_PATH`
+3. 对pyqt版本有要求，在部分电脑上（另一台服务器）会报bug（浮点数问题），适当降版本使用。
+4. linux版本为5.15.9 ``if event.button() == Qt.LeftButton:``
+            ``item = self.get_item_at_click(event)``
+            ``# item.setSelected(True) #报错？？？``
+    

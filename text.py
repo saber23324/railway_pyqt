@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import glob
 import subprocess
+import atexit
+
 # Form implementation generated from reading ui file 'Shangyi7.22wu2.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
@@ -37,7 +39,7 @@ class Ui_ShangYi(object):
         ShangYi.setObjectName("ShangYi")
         ShangYi.setGeometry(150, 70, 1610, 960)  
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../image/图标.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./image/图标.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         ShangYi.setWindowIcon(icon)  
         ShangYi.setFixedSize(ShangYi.width(), ShangYi.height())
         self.label = QtWidgets.QLabel(ShangYi)
@@ -103,7 +105,7 @@ class Ui_ShangYi(object):
         self.b0.setGeometry(QtCore.QRect(10, 20, 100, 45))
         icon1 = QtGui.QIcon()
 
-        icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("./image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b0.setIcon(icon1)
         self.b0.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b0.setObjectName("b0")
@@ -121,7 +123,7 @@ class Ui_ShangYi(object):
         self.b1.setGeometry(QtCore.QRect(10, 130, 100, 45))
         icon1 = QtGui.QIcon()
 
-        icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("./image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b1.setIcon(icon1)
         self.b1.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b1.setObjectName("b1")
@@ -134,6 +136,9 @@ class Ui_ShangYi(object):
         self.shut_down_det_res_Button.setObjectName("toolButton")
 
 
+
+
+
         self.toolButton = QtWidgets.QToolButton(ShangYi)
         self.toolButton.setGeometry(QtCore.QRect(1090, 380, 100, 45))
         self.toolButton.setObjectName("toolButton")
@@ -143,7 +148,7 @@ class Ui_ShangYi(object):
         self.b2 = QtWidgets.QToolButton(ShangYi)
         self.b2.setGeometry(QtCore.QRect(10, 200, 100, 45))
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../image/打开目录.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("./image/打开目录.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b2.setIcon(icon2)
         self.b2.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b2.setObjectName("b2")
@@ -153,7 +158,7 @@ class Ui_ShangYi(object):
         self.b4 = QtWidgets.QToolButton(ShangYi)
         self.b4.setGeometry(QtCore.QRect(10, 300, 100, 45))
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("/home/semi/桌面/ShangYiDemo/src/image/标记.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("./image/标记.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b4.setIcon(icon3)
         self.b4.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b4.setObjectName("b4")
@@ -163,35 +168,35 @@ class Ui_ShangYi(object):
         self.b3 = QtWidgets.QToolButton(ShangYi)
         self.b3.setGeometry(QtCore.QRect(10, 400, 100, 45))
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../image/脉络.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("./image/脉络.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b3.setIcon(icon4)
         self.b3.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b3.setObjectName("b3")
         self.b5 = QtWidgets.QToolButton(ShangYi)
         self.b5.setGeometry(QtCore.QRect(10, 500, 100, 45))
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("../image/删除.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("./image/删除.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b5.setIcon(icon5)
         self.b5.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b5.setObjectName("b5")
         self.b6 = QtWidgets.QToolButton(ShangYi)
         self.b6.setGeometry(QtCore.QRect(10, 600, 100, 45))
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("../image/模型.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap("./image/模型.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b6.setIcon(icon6)
         self.b6.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b6.setObjectName("b6")
         self.b7 = QtWidgets.QToolButton(ShangYi)
         self.b7.setGeometry(QtCore.QRect(10, 700, 100, 45))
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("../image/暂停.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap("./image/暂停.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b7.setIcon(icon7)
         self.b7.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b7.setObjectName("b7")
         self.b8 = QtWidgets.QToolButton(ShangYi)
         self.b8.setGeometry(QtCore.QRect(10, 800, 100, 45))
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("../image/save.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon8.addPixmap(QtGui.QPixmap("./image/save.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b8.setIcon(icon8)
         self.b8.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b8.setObjectName("b8")
@@ -252,22 +257,24 @@ class Ui_ShangYi(object):
 
         self.config_file_path = "model_path/yolov3/yolov3.py"
         self.model_weights_path = "model_path/yolov3/epoch_119.pth"
-
-        self.detection_process = subprocess.Popen(['python', 'tools/scrip_intfere.py'], stdin=subprocess.PIPE,
-                                                  stdout=subprocess.PIPE)  # 创建检测进程
+        # self.detection_process = subprocess.Popen(['python','tools/scrip_intfere.py'],stdin=subprocess.PIPE,stdout=subprocess.PIPE)#创建检测进程
+        # self.static_detection_process = subprocess.Popen(['python','tools/static_interference.py'],stdin=subprocess.PIPE,stdout=subprocess.PIPE)#创建检测进程
+        # atexit.register(self.detection_process.kill)
+        # atexit.register(self.static_detection_process.kill)
 
         self.i = 0
         self.labelList = []
 
         self.retranslateUi(ShangYi)
         QtCore.QMetaObject.connectSlotsByName(ShangYi)
-
+        
     static_pushnum = 1
 
     def hidden(self):
         self.graphicsViewRealTime.show()
         self.graphicsViewRealTime_2.show()
         self.graphicsView.hide()
+        # self.graphicsView_2.hide()
         self.label_2.hide()
         self.toolButton.hide()
         self.toolButton_2.hide()
@@ -298,6 +305,7 @@ class Ui_ShangYi(object):
         self.graphicsViewRealTime.hide()
         self.graphicsViewRealTime_2.hide()
         self.graphicsView.show()
+        # self.graphicsView_2.show()
         self.graphicsView_show_res.hide()
         self.graphicsView_show_res_2.hide()
         self.dockWidget.setVisible(True)
@@ -337,13 +345,13 @@ class Ui_ShangYi(object):
         self.b4.setText(_translate("ShangYi", "更新标注"))
         self.b10.setText(_translate("ShangYi", "批量预标注"))
         self.b3.setText(_translate("ShangYi", "更新矩形框"))
-        self.b5.setText(_translate("ShangYi", "删除关键点"))
+        self.b5.setText(_translate("ShangYi", "删除标注"))
         self.b6.setText(_translate("ShangYi", " 加载模型 "))
         # self.b7.setText(_translate("ShangYi", " 更新脉络 "))
         self.b7.setText(_translate("ShangYi", " 更新识别 "))
         self.b8.setText(_translate("ShangYi", "   保存   "))
         self.b8.setShortcut(_translate("ShangYi", "Ctrl+S"))
-
+        # self.label_3.setText(_translate("ShangYi", "预标注结果"))
         self.label_4.setText(_translate("ShangYi", "模型："))
 
         self.directory = None
@@ -385,6 +393,10 @@ class Ui_ShangYi(object):
         self.b5.clicked.connect(self.delete)
         self.b6.clicked.connect(self.detection)
         self.b7.clicked.connect(self.draw_and_connect_keypoints)
+        #预标注按钮
+        self.b10.clicked.connect(self.batch_pre)
+        self.b11.clicked.connect(self.single_pre)
+
 
         self.b0.clicked.connect(self.hidden)
         self.b0_1.clicked.connect(self.hidden)
@@ -397,6 +409,20 @@ class Ui_ShangYi(object):
         self.b7.clicked.connect(self.myshow)
 
         self.comboBox.currentIndexChanged.connect(self.modeSelectionChanged)
+
+    #在选择模型后测试（不选择为脚本默认）
+    #检测打开目录中的图片
+    def single_pre(self):
+        if self.curr_pic :
+            detect_output="-p1"+" "+self.curr_pic+"\n"
+            self.static_detection_process.stdin.write(detect_output.encode("utf-8"))
+            self.static_detection_process.stdin.flush()
+    
+    def batch_pre(self):
+        if self.label_path :
+            detect_output="-d"+" "+self.label_path+"\n"
+            self.static_detection_process.stdin.write(detect_output.encode("utf-8"))
+            self.static_detection_process.stdin.flush()
 
     def detection(self):
         if self.curr_pic and self.config_file_path and  self.model_weights_path:
@@ -447,7 +473,6 @@ class Ui_ShangYi(object):
         print("put ok")
         # self.detection_process.wait()
         # self.detection_process.stdout.readline()
-
 
     def pointsSignalSlot(self,text):  #标记名展示在右侧列表
         self.listWidget_3.clearSelection()
@@ -509,8 +534,12 @@ class Ui_ShangYi(object):
                         self.detection_current_image()
 
 
+
                     print(file_path)
                     # self.listWidget_2.addItem(file_path)
+
+
+
             self.current_files = new_files
             # print(self.current_files)
 
@@ -554,7 +583,6 @@ class Ui_ShangYi(object):
             self.show_current_result()
 
     def show_image(self, image):
-
 
 
         # w = int(image.width() * self.graphicsView.height() / image.height())
@@ -631,52 +659,9 @@ class Ui_ShangYi(object):
             # flush()：这个方法会强制将缓冲区中的数据立即写入子进程，而不是等待缓冲区满了再写入。
             self.detection_process.stdin.flush()
 
-
-            # subprocess.call(['python','tools/scrip_intfere.py','%s','%s','%s']%(file_path,self.config_file_path,self.model_weights_path))
-            # result_img_path = os.path.join('./detect_results/vis' , os.path.basename(file_path))
-            # print('检测结果 result_img_path: '+result_img_path)
-
-
-            # image_files = glob.glob(os.path.join('./detect_results/vis', '*.[jp][pn]g'))
-            #
-            #
-            # if not image_files:
-            #     print("No images found in the folder.")
-            # else:
-            #     # 找到最新添加的图片
-            #     latest_image = max(image_files, key=os.path.getctime)
-            #     print('最新的检测结果 result_img_path: ' + latest_image)
-            #
-            #     if os.path.isfile(latest_image):
-            #
-            #         result_img = QPixmap(latest_image)
-            #         self.image2 = result_img.scaled(self.graphicsView_show_res.width(), self.graphicsView_show_res.height(),
-            #                                         Qt.IgnoreAspectRatio)
-            #
-            #         picture = QGraphicsPixmapItem(self.image2)
-            #
-            #         self.graphicsView_show_res.scene.clear()
-            #         self.graphicsView_show_res.bboxPointList.clear()
-            #         self.graphicsView_show_res.bboxList.clear()
-            #         self.graphicsView_show_res.itemsToShapes.clear()
-            #         self.graphicsView_show_res.shapesToItems.clear()
-            #         self.graphicsView_show_res.scene.addItem(picture)
-            #     else:
-            #         self.graphicsView_show_res.scene.clear()
-            #         self.graphicsView_show_res.bboxPointList.clear()
-            #         self.graphicsView_show_res.bboxList.clear()
-            #         self.graphicsView_show_res.itemsToShapes.clear()
-            #         self.graphicsView_show_res.shapesToItems.clear()
         # 当前显示的图片
         if self.current_file_2:
-
             file_path = self.current_file_2
-
-
-            # "-p"：这是一个命令行参数，通常用于指定某个选项或标志。
-            # " "：这是一个空格字符，用于分隔参数和文件路径。
-            # file_path：这是一个变量，包含文件的路径。
-            # "\n"：这是一个换行符，表示命令的结束。
             detect_output = "-p2" + " " + file_path + "\n"
             # self.detection_process：这是一个子进程对象，通常由 subprocess.Popen 创建
             # stdin.write(...)：这会将数据写入子进程的标准输入（stdin）。
@@ -684,43 +669,6 @@ class Ui_ShangYi(object):
             self.detection_process.stdin.write(detect_output.encode("utf-8"))
             # flush()：这个方法会强制将缓冲区中的数据立即写入子进程，而不是等待缓冲区满了再写入。
             self.detection_process.stdin.flush()
-            #
-            #
-            # # subprocess.call(['python','tools/scrip_intfere.py','%s','%s','%s']%(file_path,self.config_file_path,self.model_weights_path))
-            # # result_img_path = os.path.join('./detect_results/vis' , os.path.basename(file_path))
-            # # print('检测结果 result_img_path: '+result_img_path)
-            #
-            #
-            # image_files = glob.glob(os.path.join('./detect_results_2/vis', '*.[jp][pn]g'))
-            #
-            #
-            # if not image_files:
-            #     print("No images found in the folder.")
-            # else:
-            #     # 找到最新添加的图片
-            #     latest_image = max(image_files, key=os.path.getctime)
-            #     print('最新的检测结果 result_img_path: ' + latest_image)
-            #
-            #     if os.path.isfile(latest_image):
-            #
-            #         result_img = QPixmap(latest_image)
-            #         self.image2 = result_img.scaled(self.graphicsView_show_res_2.width(), self.graphicsView_show_res_2.height(),
-            #                                         Qt.IgnoreAspectRatio)
-            #
-            #         picture = QGraphicsPixmapItem(self.image2)
-            #
-            #         self.graphicsView_show_res_2.scene.clear()
-            #         self.graphicsView_show_res_2.bboxPointList.clear()
-            #         self.graphicsView_show_res_2.bboxList.clear()
-            #         self.graphicsView_show_res_2.itemsToShapes.clear()
-            #         self.graphicsView_show_res_2.shapesToItems.clear()
-            #         self.graphicsView_show_res_2.scene.addItem(picture)
-            #     else:
-            #         self.graphicsView_show_res_2.scene.clear()
-            #         self.graphicsView_show_res_2.bboxPointList.clear()
-            #         self.graphicsView_show_res_2.bboxList.clear()
-            #         self.graphicsView_show_res_2.itemsToShapes.clear()
-            #         self.graphicsView_show_res_2.shapesToItems.clear()
 
     def show_current_result(self):
 
@@ -729,9 +677,9 @@ class Ui_ShangYi(object):
         if self.current_file:
             print('执行一次 current_file 的  show_current_result')
             current_file_result_path = os.path.basename(self.current_file)
-            print(' current_file_result_path: '+current_file_result_path)
+            print(' current_file_result_path: ' + current_file_result_path)
             current_file_result = os.path.join('./detect_results/vis', current_file_result_path)
-            print('current_file_result '+current_file_result)
+            print('current_file_result ' + current_file_result)
 
             if not current_file_result:
                 print("No images found in the folder.")
@@ -759,7 +707,6 @@ class Ui_ShangYi(object):
                     self.graphicsView_show_res.bboxList.clear()
                     self.graphicsView_show_res.itemsToShapes.clear()
                     self.graphicsView_show_res.shapesToItems.clear()
-
 
         if self.current_file_2:
             print('执行一次 current_file 的  show_current_result')
@@ -794,9 +741,6 @@ class Ui_ShangYi(object):
                     self.graphicsView_show_res_2.bboxList.clear()
                     self.graphicsView_show_res_2.itemsToShapes.clear()
                     self.graphicsView_show_res_2.shapesToItems.clear()
-
-
-
 
     def select_directory(self):
         self.show_det_res_Button.show()  # 展示实况检测按钮
@@ -933,28 +877,28 @@ class Ui_ShangYi(object):
                 self.graphicsView.bboxList.append([shape])
                 self.graphicsView.savePoint(x1, y1, text)
 
-    # def read_json2(self, file_path):
-    #     with open(file_path, encoding='utf-8') as f:
-    #         json_list = json.load(f)
-    #     shapes = json_list['shapes']
-    #     fileName = json_list['imagePath']
-    #     fileName = fileName.split('.')[:-1]
-    #     fileName.append('label.png')
-    #     fileName = '_'.join(fileName)
-    #
-    #     for i in range(len(shapes)):
-    #         points = shapes[i]['points']
-    #         if len(points) > 3:
-    #             x1, y1, x2, y2 = points
-    #             item = GraphicsRectItem(x1, y1, x2 - x1, y2 - y1)
-    #             self.graphicsView_2.scene.addItem(item)
-    #         else:
-    #             x1, y1 = points
-    #             shape = GraphicItem()
-    #             shape.setPos(x1, y1)
-    #             color1, color2, color3 = self.graphicsView.getColor()
-    #             shape.setBrush(QColor(color1, color2, color3))
-    #             self.graphicsView_2.scene.addItem(shape)
+    def read_json2(self, file_path):
+        with open(file_path, encoding='utf-8') as f:
+            json_list = json.load(f)
+        shapes = json_list['shapes']
+        fileName = json_list['imagePath']
+        fileName = fileName.split('.')[:-1]
+        fileName.append('label.png')
+        fileName = '_'.join(fileName)
+
+        for i in range(len(shapes)):
+            points = shapes[i]['points']
+            if len(points) > 3:
+                x1, y1, x2, y2 = points
+                item = GraphicsRectItem(x1, y1, x2 - x1, y2 - y1)
+                self.graphicsView_2.scene.addItem(item)
+            else:
+                x1, y1 = points
+                shape = GraphicItem()
+                shape.setPos(x1, y1)
+                color1, color2, color3 = self.graphicsView.getColor()
+                shape.setBrush(QColor(color1, color2, color3))
+                self.graphicsView_2.scene.addItem(shape)
 
     def draw_and_connect_keypoints(self):
         for kp0, kp1, color in self.graphicsView.MIDDLE_DOWN_WAI_KEYPOINT_CONNECTION_RULES:
@@ -975,14 +919,13 @@ class Ui_ShangYi(object):
         self.graphicsView.itemsToShapes.clear()
         self.graphicsView.shapesToItems.clear()
 
-        # 宽跟控件的一致，高等比例缩放
-        # w = int(image.width() * self.graphicsView.height() / image.height())
-        H = int(image.height() * self.graphicsView.width() / image.width())
-
-        self.image2 = image.scaled(self.graphicsView.height(), H)
+        w = int(image.width() * self.graphicsView.height() / image.height())
+        # self.image2 = image.scaled(w, self.graphicsView.height())
+        self.image2=image
         picture = QGraphicsPixmapItem(self.image2)
         self.graphicsView.scene.addItem(picture)
         json_path = self.curr_pic.split(".")[0] + ".json"
+
         if os.path.exists(json_path):
             self.read_json(json_path)
 
@@ -1036,6 +979,7 @@ class Ui_ShangYi(object):
 
         A['shapes'] = listbigoption
         fileObject = self.curr_pic.split('/')
+        print(fileObject)
         filename = fileObject[-1]
         A['imagePath'] = str(filename)
         A['imageData'] = self.base64encode_img(self.curr_pic)
@@ -1286,14 +1230,14 @@ class GraphicsView(QGraphicsView):
 
         if event.button() == Qt.LeftButton:
             item = self.get_item_at_click(event)
-            item.setSelected(True)
+            # item.setSelected(True)
 
     def mouseMoveEvent(self, event):  #鼠标移动事件
         super().mouseMoveEvent(event)
 
     def mouseReleaseEvent(self, event):  #鼠标释放事件
         super().mouseReleaseEvent(event)
-        acupuncturerects = ('person', 'person2')
+        acupuncturerects = ('BS', 'CZ','KJ')
         if event.button() == Qt.RightButton and self.Rectmode:
             pt = self.mapToScene(event.pos())
             self.x2 = pt.x()
@@ -1307,8 +1251,8 @@ class GraphicsView(QGraphicsView):
                 self.shapesToItems[item] = text
                 self.scene.addItem(item)
                 self.bboxList.append([item])
-
                 self.saveRect(self.x1, self.y1, self.x2, self.y2, text)
+                print('finish2saveRect')
                 self.scene.addItem(item)
         if event.button() == Qt.LeftButton:
             item = self.get_item_at_click(event)
