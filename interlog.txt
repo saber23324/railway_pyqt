@@ -52,3 +52,7 @@ unsupported operand type(s) for /: 'list' and 'int'
 -p1 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_1\00054.jpg
 -p2 E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_2\00059.jpg
 -d E:/3_Entrepreneurship/XZT/RailWay/RailWay/src/setting/test_1
+-m ViTDet
+-p1 /home/gsw/setting/railway_detection/detect_results/IMG_6226.jpg
+-p2 /home/gsw/setting/railway_detection/detect_results_2/IMG_6230.jpg
+-d /home/gsw/detect_results

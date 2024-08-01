@@ -12,5 +12,5 @@ pyqt5 mmdetection 3.0.0以上
 3. 对pyqt版本有要求，在部分电脑上（另一台服务器）会报bug（浮点数问题），适当降版本使用。
 4. linux版本为5.15.9 ``if event.button() == Qt.LeftButton:``
             ``item = self.get_item_at_click(event)``
-            ``# item.setSelected(True) #报错？？？``
+            ``# item.setSelected(True) #报错？？？`` 好像 直接导入就不报错了（之间将、json文件保存起来之间看） 这个功能实现的拖动
     
