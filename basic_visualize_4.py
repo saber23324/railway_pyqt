@@ -101,26 +101,47 @@ class Ui_ShangYi(object):
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
 
+        self.showRealTimeButton = QtWidgets.QToolButton(ShangYi)
+        self.showRealTimeButton.setGeometry(QtCore.QRect(10, 60, 100, 45))
+        icon1 = QtGui.QIcon()
+
+        icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.showRealTimeButton.setIcon(icon1)
+        self.showRealTimeButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        self.showRealTimeButton.setObjectName("showRealTimeButton")
+
         self.b0 = QtWidgets.QToolButton(ShangYi)
+<<<<<<< HEAD
         self.b0.setGeometry(QtCore.QRect(10, 80, 100, 45))
+=======
+        self.b0.setGeometry(QtCore.QRect(120, 60, 100, 45))
+>>>>>>> master
         icon1 = QtGui.QIcon()
 
         icon1.addPixmap(QtGui.QPixmap("./image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b0.setIcon(icon1)
         self.b0.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b0.setObjectName("b0")
-
+        self.b0.hide()
         self.b0_1 = QtWidgets.QToolButton(ShangYi)
+<<<<<<< HEAD
         self.b0_1.setGeometry(QtCore.QRect(10, 170, 100, 45))
+=======
+        self.b0_1.setGeometry(QtCore.QRect(120, 505, 100, 45))
+>>>>>>> master
         icon1 = QtGui.QIcon()
 
         icon1.addPixmap(QtGui.QPixmap("../image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b0_1.setIcon(icon1)
         self.b0_1.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b0_1.setObjectName("b0_1")
-
+        self.b0_1.hide()
         self.b1 = QtWidgets.QToolButton(ShangYi)
+<<<<<<< HEAD
         self.b1.setGeometry(QtCore.QRect(10, 260, 100, 45))
+=======
+        self.b1.setGeometry(QtCore.QRect(10, 180, 100, 45))
+>>>>>>> master
         icon1 = QtGui.QIcon()
 
         icon1.addPixmap(QtGui.QPixmap("./image/打开文件.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -146,7 +167,11 @@ class Ui_ShangYi(object):
         self.toolButton_2.setGeometry(QtCore.QRect(1090, 440, 100, 45))
         self.toolButton_2.setObjectName("toolButton_2")
         self.b2 = QtWidgets.QToolButton(ShangYi)
+<<<<<<< HEAD
         self.b2.setGeometry(QtCore.QRect(10, 350, 100, 45))
+=======
+        self.b2.setGeometry(QtCore.QRect(10, 300, 100, 45))
+>>>>>>> master
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("./image/打开目录.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b2.setIcon(icon2)
@@ -155,8 +180,13 @@ class Ui_ShangYi(object):
         self.b11 = QtWidgets.QToolButton(ShangYi)
         self.b11.setGeometry(QtCore.QRect(1090, 500, 100, 45))
         self.b11.setObjectName("b11")
+<<<<<<< HEAD
         # self.b4 = QtWidgets.QToolButton(ShangYi)
         # self.b4.setGeometry(QtCore.QRect(10, 300, 100, 45))
+=======
+        self.b4 = QtWidgets.QToolButton(ShangYi)
+        self.b4.setGeometry(QtCore.QRect(10, 420, 100, 45))
+>>>>>>> master
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("./image/标记.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         # self.b4.setIcon(icon3)
@@ -166,19 +196,28 @@ class Ui_ShangYi(object):
         self.b10.setGeometry(QtCore.QRect(1090, 560, 100, 45))
         self.b10.setObjectName("b10")
         self.b3 = QtWidgets.QToolButton(ShangYi)
+<<<<<<< HEAD
         self.b3.setGeometry(QtCore.QRect(10, 440, 100, 45))
+=======
+        self.b3.setGeometry(QtCore.QRect(10, 540, 100, 45))
+>>>>>>> master
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("./image/脉络.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b3.setIcon(icon4)
         self.b3.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b3.setObjectName("b3")
         self.b5 = QtWidgets.QToolButton(ShangYi)
+<<<<<<< HEAD
         self.b5.setGeometry(QtCore.QRect(10, 530, 100, 45))
+=======
+        self.b5.setGeometry(QtCore.QRect(10, 660, 100, 45))
+>>>>>>> master
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("./image/删除.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b5.setIcon(icon5)
         self.b5.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.b5.setObjectName("b5")
+<<<<<<< HEAD
         self.b6 = QtWidgets.QToolButton(ShangYi)
         self.b6.setGeometry(QtCore.QRect(10, 620, 100, 45))
         icon6 = QtGui.QIcon()
@@ -190,11 +229,28 @@ class Ui_ShangYi(object):
         # self.b7.setGeometry(QtCore.QRect(10, 710, 100, 45))
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap("./image/暂停.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        # self.b6 = QtWidgets.QToolButton(ShangYi)
+        # self.b6.setGeometry(QtCore.QRect(10, 600, 100, 45))
+        # icon6 = QtGui.QIcon()
+        # icon6.addPixmap(QtGui.QPixmap("../image/模型.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        # self.b6.setIcon(icon6)
+        # self.b6.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        # self.b6.setObjectName("b6")
+        # self.b7 = QtWidgets.QToolButton(ShangYi)
+        # self.b7.setGeometry(QtCore.QRect(10, 700, 100, 45))
+        # icon7 = QtGui.QIcon()
+        # icon7.addPixmap(QtGui.QPixmap("../image/暂停.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> master
         # self.b7.setIcon(icon7)
         # self.b7.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         # self.b7.setObjectName("b7")
         self.b8 = QtWidgets.QToolButton(ShangYi)
+<<<<<<< HEAD
         self.b8.setGeometry(QtCore.QRect(10, 710, 100, 45))
+=======
+        self.b8.setGeometry(QtCore.QRect(10, 780, 100, 45))
+>>>>>>> master
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap("./image/save.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.b8.setIcon(icon8)
@@ -206,23 +262,23 @@ class Ui_ShangYi(object):
         self.label_3.setObjectName("label_3")
 
         self.label_realTime = QtWidgets.QLabel(ShangYi)
-        self.label_realTime.setGeometry(QtCore.QRect(120, 60, 950, 30))
+        self.label_realTime.setGeometry(QtCore.QRect(220, 80, 950, 30))
         self.label_realTime.setAlignment(QtCore.Qt.AlignCenter)
         self.label_realTime.setObjectName("label_realTime")
 
         self.label_realTime_2 = QtWidgets.QLabel(ShangYi)
-        self.label_realTime_2.setGeometry(QtCore.QRect(120, 495, 950, 30))
+        self.label_realTime_2.setGeometry(QtCore.QRect(220, 520, 950, 30))
         self.label_realTime_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_realTime_2.setObjectName("label_realTime_2")
 
         # 图片显示控件
         self.graphicsViewRealTime = GraphicsView(ShangYi)
-        self.graphicsViewRealTime.setGeometry(QtCore.QRect(120, 80, 950, 410))  # 修改
+        self.graphicsViewRealTime.setGeometry(QtCore.QRect(120, 120, 950, 380))  # 修改
         self.graphicsViewRealTime.setObjectName("graphicsViewRealTime")
         self.graphicsViewRealTime.hide()
 
         self.graphicsViewRealTime_2 = GraphicsView(ShangYi)
-        self.graphicsViewRealTime_2.setGeometry(QtCore.QRect(120, 520, 950, 410))  # 修改
+        self.graphicsViewRealTime_2.setGeometry(QtCore.QRect(120, 560, 950, 380))  # 修改
         self.graphicsViewRealTime_2.setObjectName("graphicsViewRealTime_2")
         self.graphicsViewRealTime_2.hide()
 
@@ -271,6 +327,9 @@ class Ui_ShangYi(object):
     static_pushnum = 1
 
     def hidden(self):
+        self.b0.show()
+        self.b0_1.show()
+
         self.graphicsViewRealTime.show()
         self.graphicsViewRealTime_2.show()
         self.graphicsView.hide()
@@ -301,6 +360,8 @@ class Ui_ShangYi(object):
         # self.dockWidget_2.setGeometry(QtCore.QRect(1205, 470, 398, 205))
 
     def myshow(self):
+        self.b0.hide()
+        self.b0_1.hide()
         self.timer.stop()
         self.graphicsViewRealTime.hide()
         self.graphicsViewRealTime_2.hide()
@@ -331,8 +392,9 @@ class Ui_ShangYi(object):
         self.dockWidget_3.setWindowTitle(_translate("ShangYi", "Polygon Labels"))
         self.dockWidget_4.setWindowTitle(_translate("ShangYi", "File List"))
         # self.label_2.setText(_translate("ShangYi", "原始图像"))
-        self.b0.setText(_translate("ShangYi", "实况目录一"))
-        self.b0_1.setText(_translate("ShangYi", "实况目录二"))
+        self.showRealTimeButton.setText(_translate("ShangYi", "实况目录"))
+        self.b0.setText(_translate("ShangYi", "选择目录一"))
+        self.b0_1.setText(_translate("ShangYi", "选择目录二"))
         # self.b0.setShortcut(_translate("ShangYi", "Ctrl+O"))
         self.b1.setText(_translate("ShangYi", " 打开图像 "))
         self.b1.setShortcut(_translate("ShangYi", "Ctrl+O"))
@@ -342,6 +404,7 @@ class Ui_ShangYi(object):
         self.b2.setShortcut(_translate("ShangYi", "Ctrl+U"))
         self.b11.setText(_translate("ShangYi", "单个预标注"))
         # self.b4.setText(_translate("ShangYi", "更新关键点"))
+<<<<<<< HEAD
         # self.b4.setText(_translate("ShangYi", "更新标注"))
         self.b10.setText(_translate("ShangYi", "批量预标注"))
         self.b3.setText(_translate("ShangYi", "更新矩形框"))
@@ -351,6 +414,16 @@ class Ui_ShangYi(object):
         # self.b7.setText(_translate("ShangYi", " 更新脉络 "))
         # self.b7.setText(_translate("ShangYi", " 更新识别 "))
         self.b8.setText(_translate("ShangYi", "   保存   "))
+=======
+        self.b4.setText(_translate("ShangYi", "创建矩形框"))
+        self.b10.setText(_translate("ShangYi", "批量预标注"))
+        self.b3.setText(_translate("ShangYi", "编辑框标签"))
+        self.b5.setText(_translate("ShangYi", "删除矩形框"))
+        # self.b6.setText(_translate("ShangYi", " 加载模型 "))
+        # self.b7.setText(_translate("ShangYi", " 更新脉络 "))
+        # self.b7.setText(_translate("ShangYi", " 更新标注 "))
+        self.b8.setText(_translate("ShangYi", "   保存标注   "))
+>>>>>>> master
         self.b8.setShortcut(_translate("ShangYi", "Ctrl+S"))
         # self.label_3.setText(_translate("ShangYi", "预标注结果"))
         self.label_4.setText(_translate("ShangYi", "模型："))
@@ -388,25 +461,38 @@ class Ui_ShangYi(object):
         self.graphicsView.pointsSignal.connect(self.pointsSignalSlot)
         self.graphicsView.pointsSignal2.connect(self.pointsSignal2Slot)
         self.listWidget_3.currentRowChanged.connect(self.listSelectionChanged)
+<<<<<<< HEAD
         # self.b4.clicked.connect(self.graphicsView.slotpointSignal)
         self.b3.clicked.connect(self.graphicsView.slotrectSignal)
         self.b8.clicked.connect(self.save)
         self.b5.clicked.connect(self.delete)
         self.b6.clicked.connect(self.updata_lable)
+=======
+        self.b4.clicked.connect(self.graphicsView.slotrectSignal)
+        self.b3.clicked.connect(self.update_lable)
+        self.b8.clicked.connect(self.save)
+        self.b5.clicked.connect(self.delete)
+        # self.b6.clicked.connect(self.detection)
+>>>>>>> master
         # self.b7.clicked.connect(self.draw_and_connect_keypoints)
         #预标注按钮
         self.b10.clicked.connect(self.batch_pre)
         self.b11.clicked.connect(self.single_pre)
 
 
-        self.b0.clicked.connect(self.hidden)
-        self.b0_1.clicked.connect(self.hidden)
+        self.showRealTimeButton.clicked.connect(self.hidden)
+        # self.b0.clicked.connect(self.hidden)
+        # self.b0_1.clicked.connect(self.hidden)
         self.b1.clicked.connect(self.myshow)
         self.b2.clicked.connect(self.myshow)
         self.b3.clicked.connect(self.myshow)
         # self.b4.clicked.connect(self.myshow)
         self.b5.clicked.connect(self.myshow)
+<<<<<<< HEAD
         self.b6.clicked.connect(self.myshow)
+=======
+        # self.b6.clicked.connect(self.myshow)
+>>>>>>> master
         # self.b7.clicked.connect(self.myshow)
 
         self.comboBox.currentIndexChanged.connect(self.modeSelectionChanged)
@@ -424,6 +510,7 @@ class Ui_ShangYi(object):
             detect_output="-d"+" "+self.label_path+"\n"
             self.static_detection_process.stdin.write(detect_output.encode("utf-8"))
             self.static_detection_process.stdin.flush()
+<<<<<<< HEAD
             '''''
             if event.button() == Qt.RightButton and self.Rectmode:
             pt = self.mapToScene(event.pos())
@@ -468,6 +555,9 @@ class Ui_ShangYi(object):
     '''
     
     def updata_lable(self):
+=======
+    def update_lable(self):
+>>>>>>> master
         acupuncturerects = ('BS', 'CZ','KJ')
         items = self.graphicsView.scene.selectedItems()
         if len(items) > 0:
@@ -483,6 +573,7 @@ class Ui_ShangYi(object):
             del self.graphicsView.bboxPointList[index]
             self.graphicsView.scene.clearSelection()
             self.listWidget_3.clearSelection()
+<<<<<<< HEAD
 
         text, ok = QInputDialog().getItem(QWidget(), '更新Label', '输入label:', acupuncturerects)
         if ok and text:
@@ -508,7 +599,21 @@ class Ui_ShangYi(object):
         # print(last_text)
         
 
+=======
+>>>>>>> master
 
+        text, ok = QInputDialog().getItem(QWidget(), '更新Label', '输入label:', acupuncturerects)
+        if ok and text:
+            self.graphicsView.scene.clearSelection()
+            self.graphicsView.pointsSignal.emit(text)
+            item = GraphicsRectItem(listxy[0], listxy[1], listxy[2]-listxy[0], listxy[3]-listxy[1])
+            self.graphicsView.itemsToShapes[text] = item
+            self.graphicsView.shapesToItems[item] = text
+            self.graphicsView.scene.addItem(item)
+            self.graphicsView.bboxList.append([item])
+            self.graphicsView.saveRect(listxy[0], listxy[1], listxy[2], listxy[3], text)
+            print('finish2saveRect')
+            self.graphicsView.scene.addItem(item)
     def detection(self):
         if self.curr_pic and self.config_file_path and  self.model_weights_path:
             print('detection(self): True')
@@ -1067,7 +1172,7 @@ class Ui_ShangYi(object):
         print(fileObject)
         filename = fileObject[-1]
         A['imagePath'] = str(filename)
-        A['imageData'] = self.base64encode_img(self.curr_pic)
+        # A['imageData'] = self.base64encode_img(self.curr_pic)
         name = os.path.splitext(filename)[0]
         filepath, type = QFileDialog.getSaveFileName(None, '文件保存', name, 'json(*.json)')
         with open(filepath, 'w', encoding='utf-8') as file_obj:
@@ -1315,7 +1420,7 @@ class GraphicsView(QGraphicsView):
 
         if event.button() == Qt.LeftButton:
             item = self.get_item_at_click(event)
-            item.setSelected(True)
+            # item.setSelected(True) #报错？？？
 
     def mouseMoveEvent(self, event):  #鼠标移动事件
         super().mouseMoveEvent(event)
